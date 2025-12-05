@@ -9,11 +9,21 @@ _start:
     mov rsi, msg1
     mov rdi, 1
     mov rdx, 7
+
 circle:
+    inc rax
+    cmp rax, 26
+    jz someprog
+    loopne circle
+someprog:
+    mov rcx, 1
+    loopne circle
+    
+circle_exp1:
     mov rax, 1
     mov rbx, rcx
     syscall
-    mov rcx, rbx
+    mov rcx,rbx
     loop circle
 finish:
     mov rax, 60        ; exit

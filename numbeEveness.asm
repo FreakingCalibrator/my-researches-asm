@@ -7,7 +7,7 @@ section .bss
 section .text
 global _start
 _start:
-;
+
     ;call read
 
     mov al, 0x10

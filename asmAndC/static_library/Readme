@@ -1,0 +1,3 @@
+nasm -f elf64 consonant_letters.asm -o consonant_letters.o
+ar rcs consonant_letters.a consonant_letters.o
+gcc letter.c consonant_letters.a -o letter

@@ -1,0 +1,4 @@
+nasm -f elf64 ./sum.asm -o sum.o
+gcc -shared sum.o -o libsum.so
+gcc ./array.c -L. -lsum -o arrSum
+export LD_LIBRARY_PATH=.
